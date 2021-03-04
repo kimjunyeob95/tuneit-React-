@@ -1,0 +1,33 @@
+
+#fp-nav {position: fixed; z-index: 98; margin-top: 0 !important; top: 50%; opacity: 1; -webkit-transform: translate3d(0,-50%,0); -moz-transform: translate3d(0,-50%,0); -ms-transform: translate3d(0,-50%,0); -o-transform: translate3d(0,-50%,0); transform: translate3d(0,-50%,0);}
+#fp-nav.right {left: 0;}
+#fp-nav.left {left: 17px;}
+.fp-slidesNav{position: absolute; z-index: 4; left: 50%; opacity: 1; -webkit-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0);}
+.fp-slidesNav.bottom {bottom: 17px;}
+.fp-slidesNav.top {top: 17px;}
+#fp-nav ul, .fp-slidesNav ul {margin: 0; padding: 0;}
+#fp-nav ul li, .fp-slidesNav ul li {display: block; margin: 25px 0; position:relative;}
+#fp-nav ul li:after, .fp-slidesNav ul li:after {content:''; display:block; clear:both;}
+.fp-slidesNav ul li {display: inline-block;}
+#fp-nav ul li a {}
+#fp-nav ul li a, .fp-slidesNav ul li a {display: block; position: relative; float:left; z-index: 1; width:0px; height: 1px; background: none; cursor: pointer; text-decoration: none; transition: all 0.4s;}
+#fp-nav ul li a.active {width: 20px; height: 1px; background-color:  #f36d1a; border: none;}
+#fp-nav ul li .fp-tooltip {position: absolute; top: 50%; left: 55px; overflow: hidden; display: block; cursor: pointer; width:auto; font-family: 'Poppins', 'Noto Sans KR',sans-serif !important; letter-spacing: 0.075rem; font-size: 0.75rem; font-weight:700; line-height: 1.125rem; color: #888; white-space: nowrap; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
+#fp-nav a.active + .fp-tooltip {color: #f36d1a !important; -webkit-transition: 0.4s 0.1s; transition: 0.4s 0.1s; width: auto; opacity: 1;} /* 200928 수정*/
+
+.fp-auto-height.fp-section {height: auto !important; padding: 0;/* margin-top: 100px;*/ box-sizing: border-box;}
+
+@media only screen and (max-width: 1480px) {
+    #fp-nav ul li .fp-tooltip{left: 2.297vw;}
+    #fp-nav ul li a.active {width: 1.163vw;}
+}
+
+@media only screen and (max-width: 960px) {
+    #fp-nav {display: none !important;}
+}
+
+/* 맥북 */
+@media only screen and (max-height: 900px) and (min-width: 960px) {
+	#fp-nav ul li .fp-tooltip {left: 1.387vw;}
+	#fp-nav ul li a.active {width: 1vw;}
+}
